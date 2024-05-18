@@ -1,5 +1,6 @@
 package assets;
 
+import dn.heaps.assets.Aseprite;
 import dn.heaps.slib.*;
 
 /**
@@ -15,6 +16,9 @@ class Assets {
 
 	/** LDtk world data **/
 	public static var worldData : World;
+
+	// Hero atlas
+	public static var heroSprite : SpriteLib;
 
 
 	static var _initDone = false;

@@ -1,5 +1,7 @@
 package assets;
 
+import dn.heaps.assets.Aseprite;
+
 /**
 	Access to slice names present in Aseprite files (eg. `trace( tiles.fxStar )` ).
 	This class only provides access to *names* (ie. String). To get actual h2d.Tile, use Assets class.
@@ -12,4 +14,5 @@ package assets;
 **/
 class AssetsDictionaries {
 	public static var tiles = dn.heaps.assets.Aseprite.getDict( hxd.Res.atlas.tiles );
+	public static var hero = Aseprite.getDict(hxd.Res.atlas.hero);
 }

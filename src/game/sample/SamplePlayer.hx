@@ -1,5 +1,8 @@
 package sample;
 
+import h2d.Bitmap;
+import hxd.res.Atlas;
+
 /**
 	SamplePlayer is an Entity with some extra functionalities:
 	- user controlled (using gamepad or keyboard)
@@ -11,6 +14,7 @@ package sample;
 class SamplePlayer extends Entity {
 	var ca : ControllerAccess<GameAction>;
 	var walkSpeed = 0.;
+	//var heroSprite = new Bitmap(Res.single_frame_sprite.toImage().toTile(), s2d);
 
 	// This is TRUE if the player is not falling
 	var onGround(get,never) : Bool;
@@ -84,7 +88,9 @@ class SamplePlayer extends Entity {
 
 	/**
 		Control inputs are checked at the beginning of the frame.
-		VERY IMPORTANT NOTE: because game physics only occur during the `fixedUpdate` (at a constant 30 FPS), no physics increment should ever happen here! What this means is that you can SET a physics value (eg. see the Jump below), but not make any calculation that happens over multiple frames (eg. increment X speed when walking).
+		VERY IMPORTANT NOTE: because game physics only occur during the `fixedUpdate` (at a constant 30 FPS), 
+		no physics increment should ever happen here! What this means is that you can SET a physics value (eg. see the Jump below), 
+		but not make any calculation that happens over multiple frames (eg. increment X speed when walking).
 	**/
 	override function preUpdate() {
 		super.preUpdate();
