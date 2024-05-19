@@ -232,7 +232,10 @@ class App extends dn.Process {
 		// Gamepad bindings
 		controller.bindPadLStick4(MoveLeft, MoveRight, MoveUp, MoveDown);
 		controller.bindPad(Jump, A);
+		controller.bindPad(Dash, X);
+		controller.bindPad(Slam, RT);
 		controller.bindPad(Restart, SELECT);
+		controller.bindPad(Talk, RB);
 		controller.bindPad(Pause, START);
 		controller.bindPad(MoveLeft, DPAD_LEFT);
 		controller.bindPad(MoveRight, DPAD_RIGHT);

@@ -1,3 +1,7 @@
+import hxd.res.Sound;
+import hxd.snd.Manager;
+import hxd.snd.Manager.Buffer;
+
 class Level extends GameChildProcess {
 	/** Level grid-based width**/
 	public var cWid(default,null): Int;
@@ -75,4 +79,6 @@ class Level extends GameChildProcess {
 			render();
 		}
 	}
+
+	
 }

@@ -10,7 +10,6 @@ class SampleGame extends Game {
 
 	override function startLevel(l:World_Level) {
 		super.startLevel(l);
-		new SamplePlayer();
 	}
 }
 

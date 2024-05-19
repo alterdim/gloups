@@ -1,5 +1,6 @@
 package assets;
 
+import dn.heaps.assets.SfxDirectory;
 import dn.heaps.assets.Aseprite;
 import dn.heaps.slib.*;
 
@@ -7,6 +8,7 @@ import dn.heaps.slib.*;
 	This class centralizes all assets management (ie. art, sounds, fonts etc.)
 **/
 class Assets {
+	public static var SLIB = dn.heaps.assets.SfxDirectory.load("sfx",true);
 	// Fonts
 	public static var fontPixel : h2d.Font;
 	public static var fontPixelMono : h2d.Font;
@@ -18,7 +20,9 @@ class Assets {
 	public static var worldData : World;
 
 	// Hero atlas
-	public static var heroSprite : SpriteLib;
+	public static var hero : SpriteLib;
+	public static var player : SpriteLib;
+	public static var entities : SpriteLib;
 
 
 	static var _initDone = false;
@@ -33,6 +37,9 @@ class Assets {
 
 		// build sprite atlas directly from Aseprite file
 		tiles = dn.heaps.assets.Aseprite.convertToSLib(Const.FPS, hxd.Res.atlas.tiles.toAseprite());
+	
+		player = Aseprite.convertToSLib(Const.FPS, hxd.Res.atlas.player.toAseprite());
+		entities = Aseprite.convertToSLib(Const.FPS, hxd.Res.atlas.entities.toAseprite());
 
 		// Hot-reloading of CastleDB
 		#if debug

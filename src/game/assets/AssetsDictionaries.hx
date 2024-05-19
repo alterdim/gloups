@@ -14,5 +14,6 @@ import dn.heaps.assets.Aseprite;
 **/
 class AssetsDictionaries {
 	public static var tiles = dn.heaps.assets.Aseprite.getDict( hxd.Res.atlas.tiles );
-	public static var hero = Aseprite.getDict(hxd.Res.atlas.hero);
+	public static var player = Aseprite.getDict(hxd.Res.atlas.player);
+	public static var entities = Aseprite.getDict(hxd.Res.atlas.entities);
 }

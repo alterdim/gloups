@@ -1,0 +1,23 @@
+Null access
+BUILD: 2024-05-19-22-32-15--hldx-64
+EXCEPTION:
+
+Called from en.Checkpoint.fixedUpdate (en/Checkpoint.hx line 19)
+Called from Game.fixedUpdate (Game.hx line 213)
+Called from dn.$Process._doFixedUpdate (dn/Process.hx line 555)
+Called from dn.$Process._doFixedUpdate (dn/Process.hx line 564)
+Called from dn.$Process.updateAll (dn/Process.hx line 679)
+Called from Boot.update (Boot.hx line 62)
+Called from Boot.update (Boot.hx line 58)
+CALL:
+
+Called from $App.onCrash (App.hx line 79)
+Called from Boot.update (Boot.hx line 69)
+Called from hxd.App.mainLoop (hxd/App.hx line 193)
+Called from hxd.$System.mainLoop (hxd/System.hl.hx line 76)
+Called from hxd.$System.runMainLoop (hxd/System.hl.hx line 159)
+Called from hxd.$System.runMainLoop (hxd/System.hl.hx line 143)
+Called from haxe.$Timer.~delay.0 (C:\HaxeToolkit\haxe\std/haxe/Timer.hx line 149)
+Called from haxe.$Timer.~__constructor__.0 (C:\HaxeToolkit\haxe\std/haxe/Timer.hx line 81)
+Called from sys.thread.EventLoop.loop (C:\HaxeToolkit\haxe\std/sys/thread/EventLoop.hx line 183)
+Called from sys.thread._Thread.$Thread_Impl_.processEvents (C:\HaxeToolkit\haxe\std/hl/_std/sys/thread/Thread.hx line 83)

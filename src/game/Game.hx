@@ -19,6 +19,8 @@ class Game extends AppChildProcess {
 	/** UI **/
 	public var hud : ui.Hud;
 
+	public var hero : Hero;
+
 	/** Slow mo internal values**/
 	var curGameSpeed = 1.0;
 	var slowMos : Map<SlowMoId, { id:SlowMoId, t:Float, f:Float }> = new Map();
@@ -66,7 +68,20 @@ class Game extends AppChildProcess {
 
 		level = new Level(l);
 		// <---- Here: instanciate your level entities
-
+		var entityLayer = level.data.l_Entities;
+		for (straw in entityLayer.all_Strawberry)
+			{
+				new Strawberry(straw.cx, straw.cy);
+			}
+		for (spike in entityLayer.all_Spike)
+			{
+				new Spikes(spike.cx, spike.cy);
+			}
+		for (check in entityLayer.all_Checkpoint)
+			{
+				new Checkpoint(check.cx, check.cy);
+			}
+		hero = new Hero(5, 5);
 		camera.centerOnTarget();
 		hud.onLevelStart();
 		dn.Process.resizeAll();

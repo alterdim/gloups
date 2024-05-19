@@ -6,7 +6,10 @@ enum abstract GameAction(Int) to Int {
 	var MoveDown;
 
 	var Jump;
+	var Slam;
+	var Dash;
 	var Restart;
+	var Talk;
 
 	var MenuLeft;
 	var MenuRight;
@@ -28,6 +31,10 @@ enum abstract GameAction(Int) to Int {
 /** Entity state machine. Each entity can only have 1 active State at a time. **/
 enum abstract State(Int) {
 	var Normal;
+	var HERO_DASHING;
+	var HERO_JUMPING;
+	var HERO_IDLE;
+	var HERO_SQUISH;
 }
 
 
